@@ -33,6 +33,10 @@ body {
   transition: background-color 0.3s ease;
 }
 
+.social-icons a:hover {
+    color: #007bff;
+  }
+
 #navbar a:hover {
   background-color: #333;
 }
@@ -166,20 +170,16 @@ footer {
   transition: color 0.3s ease;
 }
 
-.social-icons a:hover {
-  color: #007bff;
-}
-
 /* Media Query for screens with max-width of 768px (tablet) */
 @media (max-width: 768px) {
-  #navbar ul{
+  #navbar ul {
     flex-direction: column;
     height: auto;
-      }
+  }
 
   #navbar li {
     margin-bottom: 10px;
-    }
+  }
 
   .social-icons {
     margin-top: 10px;
@@ -202,6 +202,6 @@ footer {
   }
 
   #skills-section li {
-   font-size: 18px;
+    font-size: 18px;
   }
-    }
+}
