@@ -35,8 +35,20 @@ body {
   transition: background-color 0.3s ease;
 }
 
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #fff;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
 .social-icons a:hover {
   color: #007bff;
+}
+
+.project-tile a:hover {
+  background-color: #0056b3;
 }
 
 #navbar a {
@@ -125,18 +137,6 @@ body {
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 5px;
-}
-
-.social-icons a {
-  display: inline-block;
-  margin: 0 10px;
-  color: #fff;
-  font-size: 24px;
-  transition: color 0.3s ease;
-}
-
-.project-tile a:hover {
-  background-color: #0056b3;
 }
 
 footer {
