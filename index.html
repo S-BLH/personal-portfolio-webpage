@@ -1,32 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>My Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background-color: #111;
+          color: #fff;
+        }
+
+        #navbar {
+          position: fixed;
+          top: 0;
+          width: 100%;
+          background-color: #000;
+          color: #fff;
+          z-index: 100;
+        }
+
+        #navbar ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          height: 60px;
+        }
+
+        #navbar a {
+          color: #fff;
+          text-decoration: none;
+          padding: 10px;
+          font-size: 18px;
+          transition: background-color 0.3s ease;
+        }
+
+        #navbar a:hover {
+          background-color: #333;
+        }
+
+        #welcome-section {
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          background-color: #111;
+        }
+
+        #welcome-section h1 {
+          font-size: 48px;
+          margin-bottom: 20px;
+        }
+
+        #about-section {
+          padding: 50px;
+          text-align: center;
+          background-color: #000;
+        }
+
+        #about-section h2 {
+          font-size: 36px;
+          margin-bottom: 20px;
+        }
+
+        #about-section p {
+          font-size: 18px;
+          margin-bottom: 20px;
+        }
+
+        #about-section span {
+          font-size: 24px;
+          font-weight: bold;
+        }
+
+        #skills-section {
+          padding: 50px;
+          text-align: center;
+          background-color: #111;
+        }
+
+        #skills-section h2 {
+          font-size: 36px;
+          margin-bottom: 20px;
+        }
+
+        #skills-section ul {
+          list-style-type: none;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        #skills-section li {
+          margin: 10px;
+          font-size: 20px;
+        }
+
+        #projects {
+          padding: 20px;
+          background-color: #111;
+        }
+
+        .project-tile {
+          background-color: #007bff;
+          padding: 20px;
+          margin-bottom: 20px;
+          border-radius: 5px;
+        }
+
+        .project-tile h2 {
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+
+        .project-tile p {
+          font-size: 16px;
+          margin-bottom: 20px;
+        }
+
+        .project-tile a {
+          display: inline-block;
+          padding: 10px 20px;
+          background-color: #fff;
+          color: #007bff;
+          text-decoration: none;
+          border-radius: 5px;
+          transition: background-color 0.3s ease;
+        }
+
+        .project-tile a:hover {
+          background-color: #0056b3;
+        }
+
+        footer {
+          text-align: center;
+          padding: 20px;
+          background-color: #000;
+        }
+
+        #profile-link {
+          display: inline-block;
+          padding: 10px 20px;
+          background-color: #007bff;
+          color: #fff;
+          text-decoration: none;
+          border-radius: 5px;
+          transition: background-color 0.3s ease;
+        }
+
+        #profile-link:hover {
+          background-color: #0056b3;
+        }
+
+        .social-icons {
+          display: flex;
+          justify-content: center;
+          margin-top: 20px;
+        }
+
+        .social-icons a {
+          display: inline-block;
+          margin: 0 10px;
+          color: #fff;
+          font-size: 24px;
+          transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+          color: #007bff;
+        }
+
+        /* Media Query for screens with max-width of 768px (tablet) */
+        @media (max-width: 768px) {
+            #navbar ul{
+              flex-direction: column;
+              height: auto;
+            }
+
+            #navbar li {
+              margin-bottom: 10px;
+            }
+
+            .social-icons {
+              margin-top: 10px;
+            }
+
+            #welcome-section h1 {
+              font-size: 36px;
+            }
+
+            #about-section h2 {
+              font-size: 24px;
+            }
+
+            #about-section span {
+              font-size: 20px;
+            }
+
+            #skills-section h2 {
+              font-size: 24px;
+            }
+
+            #skills-section li {
+              font-size: 18px;
+            }
+        }
+  </style>
+  <title>My Portfolio</title>
 </head>
+
 <body>
-    <header id="navbar">
-        <nav>
-            <ul>
-                <li><a href="#welcome-section">Welcome</a></li>
-                <li><a href="#projects">Projects</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header id="navbar">
+    <nav>
+      <ul>
+        <li><a href="#welcome-section">Home</a></li>
+        <li><a href="#about-section">About</a></li>
+        <li><a href="#skills-section">Skills</a></li>
+        <li><a href="#projects-section">Projects</a></li>
+        <li><a href="#contact-section">Contact</a></li>
+        </ul>
+    </nav>
+  </header>
+
     <section id="welcome-section">
-        <h1>Welcome to My Portfolio</h1>
+      <h1>Welcome to My Portfolio</h1>
     </section>
-    <section id="projects">
-        <div class="project-tile">
-            <h2>Project 1</h2>
-            <p>Description of project 1</p>
-            <a href="#">View Project</a>
+
+    <section id="about-section">
+      <h2>About Me</h2>
+        <p>Hi, my name is <span>Sumita Balouch.</span>I am a passionate web development trainee. I love to create
+            innovative solutions and contribute to the development community. My goal is to continuously learn and grow as a
+            developer.</p>
+        <p>"Stay tuned for exciting updates on upcoming projects, blog posts, events, and special announcements coming soon to my portfolio!" </p>
+    </section>
+
+    <section id="skills-section">
+      <h2>Skills</h2>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>responsive design</li>
+        </ul>
+    </section>
+
+    <section id="projects-section">
+        <h2>Projects</h2>
+          <div id="projects">
+            <div class="project-tile">
+              <h2>Project 1</h2>
+                <p>Odin-project</p>
+                  <a href="https://s-blh.github.io/Odin_project/">View Project</a>
+            </div>
+            <div class="project-tile">
+              <h2>Project 2</h2>
+              <p>Survey-form</p>
+              <a href="https://s-blh.github.io/survey-form/">View Project</a>
+            </div>
+            <div class="project-tile">
+              <h2>Project 3</h2>
+              <p>tribute-project</p>
+              <a href="https://s-blh.github.io/tribute-page/">View Project</a>
+            </div>
+            <div class="project-tile">
+              <h2>Project 4</h2>
+              <p>technical-documentation-page.</p>
+              <a href="https://s-blh.github.io/technical-documentation-page/">View Project</a>
+            </div>
+            <div class="project-tile">
+              <h2>Project 5</h2>
+              <p>product-landing-page</p>
+              <a href="#">View Project</a>
+            </div>
+            <div class="project-tile">
+              <h2>project 6</h2>
+              <p>personal-portfolio</p>
+              <a href="#">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-section">
+        <h2>Contact</h2>
+        <div class="social-icons">
+          <a href="http://github.com/S-BLH"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/sumita-balouch-959197309?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/s___blh?igsh=ZzNhNXR0c3E1ZWJx"><i class="fab fa-instagram"></i></a>
         </div>
     </section>
     <footer>
-        <a rel="noopener" id="profile-link" href="https://github.com/your-github-profile" target="_blank">Visit my GitHub profile</a>
+      <p>&copy; 2024 My Portfolio. All rights reserved.</p>
     </footer>
 </body>
+
 </html>
